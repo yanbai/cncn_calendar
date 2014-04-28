@@ -1,0 +1,109 @@
+
+<style>
+.fn-clear:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}
+.fn-clear {zoom:1;/* for IE6 IE7 */}
+
+
+.ng-cloak{display:none;}
+.date_select {
+	width:100%;
+	font-size: 12px;
+	background-color: white;
+	border-bottom:1px solid #ccc;
+	z-index: 3;
+	line-height: 12px;
+}
+.date_select_yymm {
+	position: relative;
+	padding:0 0;
+	background:#f9f9f9;
+	height:30px;
+	line-height: 30px;
+	color:#333;
+	font-size: 14px;
+}
+.date_select_yymm i {position: absolute;top: 18px;border: 7px solid transparent;cursor: pointer;height:0px;width:0px;}
+.date_select_yymm i.next{border-left:7px solid #666;left:146px;}
+.date_select_yymm i.prev{border-right:7px solid #666;left:15px;text-align: center;}
+.date_select_yymm i.next:hover{border-left:7px solid #ffaa2e;transition: 0.2s;}
+.date_select_yymm i.prev:hover{border-right:7px solid #ffaa2e;transition: 0.2s;}
+.date_select_yymm span{
+	display:block;
+	height:30px;
+	text-align: center;
+}
+.date_select_dd {
+	padding: 0px 0px 15px 15px;
+	color: #888;
+	background:#f9f9f9;
+}
+.date_select_dd span{width: 13%;height: 25px;padding: 4px 0;text-align: center;float: left;position: relative;line-height:25px; border:1px solid #fff; border-right:none;}
+/*
+.date_select_dd span i{
+	position: absolute;
+	right:0px;
+	top:11px;
+	height:13px;
+	width:1px;
+	background: #eee;
+}
+*/
+.date_select_dd a, .date_select_dd b {
+	width: 13%;
+	height: 35px;
+	padding: 4px 0;
+	text-align: center;
+	float: left;
+	margin: 1px 0 0 1px;
+	position: relative;
+	line-height:20px;
+}
+.date_select_dd a{
+	position:relative;
+	color:#cfcfcf;
+}
+.date_select_dd a em.price{
+	position:absolute;
+	bottom:2px;
+	left:2px;
+	color:#ff9c00;
+}
+.date_select_dd a.un{
+	line-height:35px;
+	background:#eef2f3;
+}
+.date_select_dd a.valuable{
+	color:#333;
+	font-weight:bold;
+	background:#e5ebeb
+}
+
+.date_select_dd a.cur{
+	background-color:#ffc35b;
+	color:#fff
+}
+.date_select_dd a.cur em.price{
+	color:#fff
+}
+.date_select_back_today{transition: 0.3s linear all;height:24px;line-height: 24px;color:#333!important;width: 80px;background: #fff url(../image/com/menu_bg.png) repeat-x;border: 1px solid #e7e7e7;border-radius: 2px;position: absolute;top:12px;right: 15px;text-align: center;}
+.date_select_back_today:hover{box-shadow: 0 0 3px #f18b40;}
+</style>
+
+<header class="header"><a class="fl" href="javascript:void(0)"><i class="b_1"></i><i class="b_2"></i></a><a href="javascript:;">m.cncn.com »’¿˙</a></header>
+
+<div>
+	<div id="date"></div>
+</div>
+<script src="js/calendar.js"></script>
+
+<script>
+
+var _data = {"2014-04-25":{"price_d":"585","price_child_d":"0","date":"2014-04-25"},"2014-04-26":{"price_d":"585","price_child_d":"0","date":"2014-04-26"},"2014-04-27":{"price_d":"585","price_child_d":"0","date":"2014-04-27"},"2014-04-28":{"price_d":"585","price_child_d":"0","date":"2014-04-28"},"2014-04-29":{"price_d":"585","price_child_d":"0","date":"2014-04-29"},"2014-04-30":{"price_d":"585","price_child_d":"0","date":"2014-04-30"},"2014-05-01":{"price_d":"585","price_child_d":"0","date":"2014-05-01"},"2014-05-02":{"price_d":"585","price_child_d":"0","date":"2014-05-02"},"2014-05-03":{"price_d":"585","price_child_d":"0","date":"2014-05-03"},"2014-05-04":{"price_d":"585","price_child_d":"0","date":"2014-05-04"},"2014-05-05":{"price_d":"585","price_child_d":"0","date":"2014-05-05"},"2014-05-06":{"price_d":"585","price_child_d":"0","date":"2014-05-06"},"2014-05-07":{"price_d":"585","price_child_d":"0","date":"2014-05-07"},"2014-05-08":{"price_d":"585","price_child_d":"0","date":"2014-05-08"},"2014-05-09":{"price_d":"585","price_child_d":"0","date":"2014-05-09"},"2014-05-10":{"price_d":"585","price_child_d":"0","date":"2014-05-10"},"2014-05-11":{"price_d":"585","price_child_d":"0","date":"2014-05-11"},"2014-05-12":{"price_d":"585","price_child_d":"0","date":"2014-05-12"},"2014-05-13":{"price_d":"585","price_child_d":"0","date":"2014-05-13"},"2014-05-14":{"price_d":"585","price_child_d":"0","date":"2014-05-14"},"2014-05-15":{"price_d":"585","price_child_d":"0","date":"2014-05-15"},"2014-05-16":{"price_d":"585","price_child_d":"0","date":"2014-05-16"},"2014-05-17":{"price_d":"585","price_child_d":"0","date":"2014-05-17"},"2014-05-18":{"price_d":"585","price_child_d":"0","date":"2014-05-18"},"2014-05-19":{"price_d":"585","price_child_d":"0","date":"2014-05-19"},"2014-05-20":{"price_d":"585","price_child_d":"0","date":"2014-05-20"},"2014-05-21":{"price_d":"585","price_child_d":"0","date":"2014-05-21"},"2014-05-22":{"price_d":"585","price_child_d":"0","date":"2014-05-22"},"2014-05-23":{"price_d":"585","price_child_d":"0","date":"2014-05-23"},"2014-05-24":{"price_d":"585","price_child_d":"0","date":"2014-05-24"},"2014-05-25":{"price_d":"585","price_child_d":"0","date":"2014-05-25"},"2014-05-26":{"price_d":"585","price_child_d":"0","date":"2014-05-26"},"2014-05-27":{"price_d":"585","price_child_d":"0","date":"2014-05-27"},"2014-05-28":{"price_d":"585","price_child_d":"0","date":"2014-05-28"},"2014-05-29":{"price_d":"585","price_child_d":"0","date":"2014-05-29"},"2014-05-30":{"price_d":"585","price_child_d":"0","date":"2014-05-30"},"2014-05-31":{"price_d":"585","price_child_d":"0","date":"2014-05-31"},"2014-06-01":{"price_d":"585","price_child_d":"0","date":"2014-06-01"},"2014-06-02":{"price_d":"585","price_child_d":"0","date":"2014-06-02"},"2014-06-03":{"price_d":"585","price_child_d":"0","date":"2014-06-03"},"2014-06-04":{"price_d":"585","price_child_d":"0","date":"2014-06-04"},"2014-06-05":{"price_d":"585","price_child_d":"0","date":"2014-06-05"},"2014-06-06":{"price_d":"585","price_child_d":"0","date":"2014-06-06"},"2014-06-07":{"price_d":"585","price_child_d":"0","date":"2014-06-07"},"2014-06-08":{"price_d":"585","price_child_d":"0","date":"2014-06-08"},"2014-06-09":{"price_d":"585","price_child_d":"0","date":"2014-06-09"},"2014-06-10":{"price_d":"585","price_child_d":"0","date":"2014-06-10"},"2014-06-11":{"price_d":"585","price_child_d":"0","date":"2014-06-11"},"2014-06-12":{"price_d":"585","price_child_d":"0","date":"2014-06-12"},"2014-06-13":{"price_d":"585","price_child_d":"0","date":"2014-06-13"},"2014-06-14":{"price_d":"585","price_child_d":"0","date":"2014-06-14"},"2014-06-15":{"price_d":"585","price_child_d":"0","date":"2014-06-15"},"2014-06-16":{"price_d":"585","price_child_d":"0","date":"2014-06-16"},"2014-06-17":{"price_d":"585","price_child_d":"0","date":"2014-06-17"},"2014-06-18":{"price_d":"585","price_child_d":"0","date":"2014-06-18"},"2014-06-19":{"price_d":"585","price_child_d":"0","date":"2014-06-19"},"2014-06-20":{"price_d":"585","price_child_d":"0","date":"2014-06-20"},"2014-06-21":{"price_d":"585","price_child_d":"0","date":"2014-06-21"},"2014-06-22":{"price_d":"585","price_child_d":"0","date":"2014-06-22"},"2014-06-23":{"price_d":"585","price_child_d":"0","date":"2014-06-23"},"2014-06-24":{"price_d":"585","price_child_d":"0","date":"2014-06-24"},"2014-06-25":{"price_d":"585","price_child_d":"0","date":"2014-06-25"},"2014-06-26":{"price_d":"585","price_child_d":"0","date":"2014-06-26"},"2014-06-27":{"price_d":"585","price_child_d":"0","date":"2014-06-27"},"2014-06-28":{"price_d":"585","price_child_d":"0","date":"2014-06-28"},"2014-06-29":{"price_d":"585","price_child_d":"0","date":"2014-06-29"},"2014-06-30":{"price_d":"585","price_child_d":"0","date":"2014-06-30"},"2014-07-01":{"price_d":"585","price_child_d":"0","date":"2014-07-01"},"2014-07-02":{"price_d":"585","price_child_d":"0","date":"2014-07-02"},"2014-07-03":{"price_d":"585","price_child_d":"0","date":"2014-07-03"},"2014-07-04":{"price_d":"585","price_child_d":"0","date":"2014-07-04"},"2014-07-05":{"price_d":"585","price_child_d":"0","date":"2014-07-05"},"2014-07-06":{"price_d":"585","price_child_d":"0","date":"2014-07-06"},"2014-07-07":{"price_d":"585","price_child_d":"0","date":"2014-07-07"},"2014-07-08":{"price_d":"585","price_child_d":"0","date":"2014-07-08"},"2014-07-09":{"price_d":"585","price_child_d":"0","date":"2014-07-09"},"2014-07-10":{"price_d":"585","price_child_d":"0","date":"2014-07-10"},"2014-07-11":{"price_d":"585","price_child_d":"0","date":"2014-07-11"},"2014-07-12":{"price_d":"585","price_child_d":"0","date":"2014-07-12"},"2014-07-13":{"price_d":"585","price_child_d":"0","date":"2014-07-13"},"2014-07-14":{"price_d":"585","price_child_d":"0","date":"2014-07-14"}};
+
+var _data = {"2014-12-25":{"price_d":"585","price_child_d":"0","date":"2014-12-25"},"2015-01-26":{"price_d":"585","price_child_d":"0","date":"2015-01-26"}};
+/*
+example
+Calendar.init(inputElementId)
+*/
+Calendar.init('date',_data);
+</script>

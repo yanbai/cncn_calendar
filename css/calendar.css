@@ -1,0 +1,77 @@
+.fn-clear:after {visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}
+.fn-clear {zoom:1;/* for IE6 IE7 */}
+
+
+.ng-cloak{display:none;}
+.date_select {
+	width:100%;
+	font-size: 12px;
+	background-color: white;
+	border-bottom:1px solid #ccc;
+	z-index: 3;
+	line-height: 12px;
+}
+.date_select_yymm {
+	position: relative;
+	padding:0 0;
+	background:#f9f9f9;
+	height:30px;
+	line-height: 30px;
+	color:#333;
+	font-size: 14px;
+}
+.date_select_yymm i {position: absolute;top: 18px;border: 7px solid transparent;cursor: pointer;height:0px;width:0px;}
+.date_select_yymm i.next{border-left:7px solid #666;left:146px;}
+.date_select_yymm i.prev{border-right:7px solid #666;left:15px;text-align: center;}
+.date_select_yymm i.next:hover{border-left:7px solid #ffaa2e;transition: 0.2s;}
+.date_select_yymm i.prev:hover{border-right:7px solid #ffaa2e;transition: 0.2s;}
+.date_select_yymm span{position: absolute;left: 37px;height:30px;width: 100px;text-align: center;}
+.date_select_dd {padding: 0px 0px 15px 15px;margin-top: 5px;color: #888;}
+.date_select_dd span{width: 13%;height: 25px;padding: 4px 0;text-align: center;float: left;position: relative;line-height:25px; border:1px solid #fff; border-right:none;}
+.date_select_dd span i{
+	position: absolute;
+	right:0px;
+	top:11px;
+	height:13px;
+	width:1px;
+	background: #eee;
+}
+.date_select_dd a, .date_select_dd b {
+	width: 13%;
+	height: 35px;
+	padding: 4px 0;
+	text-align: center;
+	float: left;
+	border: 1px solid #EEE;
+	margin: -1px 0 0 -1px;
+	position: relative;
+	line-height:25px;
+}
+.date_select_dd a{
+	position:relative;
+	color:#cfcfcf;
+}
+.date_select_dd a em.price{
+	position:absolute;
+	bottom:2px;
+	left:2px;
+}
+.date_select_dd a.un{
+	
+}
+.date_select_dd a.valuable{
+	color:#333;
+}
+
+.date_select_dd a.cur{
+	background-color:#ffc35b;
+	color:#fff
+}
+
+.date_select_dd a:hover{
+	background-color: #56ad64;
+	color: #fff;
+	cursor: pointer;
+}
+.date_select_back_today{transition: 0.3s linear all;height:24px;line-height: 24px;color:#333!important;width: 80px;background: #fff url(../image/com/menu_bg.png) repeat-x;border: 1px solid #e7e7e7;border-radius: 2px;position: absolute;top:12px;right: 15px;text-align: center;}
+.date_select_back_today:hover{box-shadow: 0 0 3px #f18b40;}
