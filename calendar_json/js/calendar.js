@@ -66,31 +66,31 @@ MCalendar(2013,'March') wrong todo
 			};
 			this.str = '<div class="date_select_dd fn-clear">\
 				<span>\
-					Ò»\
+					ä¸€\
 					<i></i>\
 				</span>\
 				<span>\
-					¶þ\
+					äºŒ\
 					<i></i>\
 				</span>\
 				<span>\
-					Èý\
+					ä¸‰\
 					<i></i>\
 				</span>\
 				<span>\
-					ËÄ\
+					å››\
 					<i></i>\
 				</span>\
 				<span>\
-					Îå\
+					äº”\
 					<i></i>\
 				</span>\
 				<span>\
-					Áù\
+					å…­\
 					<i></i>\
 				</span>\
 				<span>\
-					ÈÕ\
+					æ—¥\
 					<i></i>\
 				</span>'+s+this.str+
 			'</div>';
@@ -99,7 +99,7 @@ MCalendar(2013,'March') wrong todo
 	
 	
 	
-	//newMCalendar¼Ì³ÐMCalendar
+	//newMCalendarç»§æ‰¿MCalendar
 	var newMCalendar = function(year,month,day,data){
 		MCalendar.call(this,year,month);
 		if(typeof(arguments[2]) == 'number'){
@@ -127,35 +127,35 @@ MCalendar(2013,'March') wrong todo
 			var valuable = getData(this.year,this.month,i,this.data);
 			var m = this.month>8?Number(this.month)+1:'0'+(Number(this.month)+1);
 			var d = i>9?i:'0'+i;
-			this.str += '<a class="' + (this.today.getFullYear() == this.year &&  this.today.getMonth() == this.month && this.today.getDate() == i ? 'cur' : '') + (valuable?' valuable':'') + (valuable?'':' un') +'" href="javascript:;" data_price_d="'+(valuable?valuable['price_d']:'')+'" data_price_child_d="'+(valuable?valuable['price_child_d']:'')+'" data_date="'+this.year+'-'+m+'-'+d+'">'+'<em class="date">'+i+'</em>'+(valuable?'<em class="price">£¤'+valuable['price_d']+'</em>':'')+'</a>'
+			this.str += '<a class="' + (this.today.getFullYear() == this.year &&  this.today.getMonth() == this.month && this.today.getDate() == i ? 'cur' : '') + (valuable?' valuable':'') + (valuable?'':' un') +'" href="javascript:;" data_price_d="'+(valuable?valuable['price_d']:'')+'" data_price_child_d="'+(valuable?valuable['price_child_d']:'')+'" data_date="'+this.year+'-'+m+'-'+d+'">'+'<em class="date">'+i+'</em>'+(valuable?'<em class="price">ï¿¥'+valuable['price_d']+'</em>':'')+'</a>'
 		};
 		this.str = '<div class="date_select_dd fn-clear">\
 			<span>\
-				Ò»\
+				ä¸€\
 				<i></i>\
 			</span>\
 			<span>\
-				¶þ\
+				äºŒ\
 				<i></i>\
 			</span>\
 			<span>\
-				Èý\
+				ä¸‰\
 				<i></i>\
 			</span>\
 			<span>\
-				ËÄ\
+				å››\
 				<i></i>\
 			</span>\
 			<span>\
-				Îå\
+				äº”\
 				<i></i>\
 			</span>\
 			<span>\
-				Áù\
+				å…­\
 				<i></i>\
 			</span>\
 			<span>\
-				ÈÕ\
+				æ—¥\
 				<i></i>\
 			</span>'+s+this.str+
 		'</div>';
@@ -175,7 +175,7 @@ MCalendar(2013,'March') wrong todo
 			EventUtil.addHandler(document,'click',function(event){
 				var event = EventUtil.getEvent(event),
 					target = EventUtil.getTarget(event);
-				//ÇÐ»»ÈÕÆÚÃæ°å
+				//åˆ‡æ¢æ—¥æœŸé¢æ¿
 				if(target.className == 'prev' || target.className == 'next'){
 					t.change(target.className);
 					if (event.stopPropagation) {
@@ -189,23 +189,23 @@ MCalendar(2013,'March') wrong todo
 		
 		showDateBoard:function(){
 			var range = [];
-			//»ñÈ¡Êý¾ÝÌá¹©µÄµÚÒ»ÌõºÍ×îºóÒ»ÌõÔÂ·Ý£¬ÒÔ¼°µÚÒ»ÌõºÍ×îºóÒ»ÌõÄê·Ý
+			//èŽ·å–æ•°æ®æä¾›çš„ç¬¬ä¸€æ¡å’Œæœ€åŽä¸€æ¡æœˆä»½ï¼Œä»¥åŠç¬¬ä¸€æ¡å’Œæœ€åŽä¸€æ¡å¹´ä»½
 			var day_data = Object.keys(this.data),
 				first_m = parseInt(day_data[0].split('-')[1],10)-1,
 				last_m = parseInt(day_data[day_data.length-1].split('-')[1],10)-1,
 				first_y = parseInt(day_data[0].split('-')[0],10),
 				last_y = parseInt(day_data[day_data.length-1].split('-')[0],10);
-			//´¦Àí¿çÄêÇé¿ö
+			//å¤„ç†è·¨å¹´æƒ…å†µ
 			if(last_y>first_y){
 				for(var i=first_m,l=11;i<=l;i++)range.push(String(first_y)+'-'+String(i));
 				for(var i=0,l=last_m;i<=l;i++)range.push(String(last_y)+'-'+String(i));
 			}else{
-			//²»¿çÄê
+			//ä¸è·¨å¹´
 				for(var i=first_m,l=last_m;i<=l;i++){
 					range.push(String(first_y)+'-'+String(i));
 				}
 			}
-			//»ñÈ¡Êý¾ÝÌá¹©µÄµÚÒ»ÌìÖ®Ç°×î½üµÄÒ»¸öÖÜÒ» »òÕßµ±ÔÂµÚÒ»Ìì£¬ÒÔ±ãµÚÒ»¸öÔÂÏÔÊ¾
+			//èŽ·å–æ•°æ®æä¾›çš„ç¬¬ä¸€å¤©ä¹‹å‰æœ€è¿‘çš„ä¸€ä¸ªå‘¨ä¸€ æˆ–è€…å½“æœˆç¬¬ä¸€å¤©ï¼Œä»¥ä¾¿ç¬¬ä¸€ä¸ªæœˆæ˜¾ç¤º
 			var f_day_of_data = parseInt(day_data[0].split('-')[2],10),
 				f_day = new Date(first_y,first_m,f_day_of_data);
 				show_first_day = f_day.getDay()>0 ? (f_day_of_data-(f_day.getDay()-1)>0?f_day_of_data-(f_day.getDay()-1):1) : (f_day_of_data-6>0?f_day_of_data-6:1);
@@ -221,7 +221,7 @@ MCalendar(2013,'March') wrong todo
 				dateDiv.className = 'date_select';
 				dateDiv.id = 'date_select_30';
 				dateDiv.innerHTML = '<div class="date_select_yymm">\
-								<span>'+this.year+'Äê '+(Number(range[i].split('-')[1])+1)+'ÔÂ</span>\
+								<span>'+this.year+'å¹´ '+(Number(range[i].split('-')[1])+1)+'æœˆ</span>\
 							</div>'+thisMonth.str
 				this.input.appendChild(dateDiv);
 			};
@@ -246,11 +246,11 @@ MCalendar(2013,'March') wrong todo
 				<div class="date_select_yymm">\
 					<i class="prev"></i>\
 					<i class="next"></i>\
-					<span>'+this.year+'Äê '+(this.month+1)+'ÔÂ</span>\
-				</div><a class="date_select_back_today" href="javascript:;">»Øµ½½ñÌì</a>'+newMonth.str;
+					<span>'+this.year+'å¹´ '+(this.month+1)+'æœˆ</span>\
+				</div><a class="date_select_back_today" href="javascript:;">å›žåˆ°ä»Šå¤©</a>'+newMonth.str;
 		},
 		
-		dateType:{type_1:['Äê-ÔÂ-ÈÕ','-'],type_2:['XXÄêXXÔÂXXÈÕ','']},
+		dateType:{type_1:['å¹´-æœˆ-æ—¥','-'],type_2:['XXå¹´XXæœˆXXæ—¥','']},
 		
 		getDate:function(y,m,d){
 			this.input.value = y+'-'+(m*1+1)+'-'+d;
