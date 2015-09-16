@@ -165,7 +165,7 @@ MCalendar(2013,'March') wrong todo
 		today : new Date(),
 		year : new Date().getFullYear(),
 		month : new Date().getMonth(),
-		
+
 		init:function(ele,data){
 			var t = this;
 			this.data = data;
